@@ -32,6 +32,14 @@ const styles = StyleSheet.create({
     height: 1,
     backgroundColor: "lightgrey",
   },
+  phoneRow:{
+    flexDirection:"row",
+    justifyContent:"space-between",
+  },
+  countryCode:{
+    flexDirection: "row",
+    alignItems: "center",
+  },
   imageHn: {
     width: 25,
     height: 25,
