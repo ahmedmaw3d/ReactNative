@@ -8,8 +8,8 @@ import {name as appName} from './app.json';
 import App from './App'
 import GreenScreen from './GreenScreen';
 import EditProfile from './EditProfile';
-import LoganIn from './LoganIn';
+import LoginScreen from './LoginScreen';
 
 
 
-AppRegistry.registerComponent(appName, ()=> EditProfile);
+AppRegistry.registerComponent(appName, ()=> LoginScreen);
