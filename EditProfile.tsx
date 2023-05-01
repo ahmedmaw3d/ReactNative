@@ -32,42 +32,32 @@ const EditProfile = () => {
       </View>
       <View style={styles.section}>
         <Text>Mobile No</Text>
-        <View style={{
-          flexDirection:"row",
-          justifyContent:"space-between",
-        }}>
-        <View style={{
-          width: "25%",
-        }}>
+        <View style={styles.phoneRow}>
           <View
             style={{
-              flexDirection: "row",
-              alignItems: "center",
+              width: "25%",
             }}
           >
-            <Image
-              style={styles.imageHn}
-              source={{
-                uri:
-                  "https://scontent.fcai20-5.fna.fbcdn.net/v/t1.15752-9/340401649_1225822474725732_2024298827305685223_n.png?stp=cp0_dst-png&_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_ohc=os5obX3qkKUAX-8V2HY&_nc_oc=AQl4hHI1t586DrSLlq8L9iyG2nkuwHGjrUF4kpTnhbkmD8nqOaxoW2PNd0SF2sCBWMM&_nc_ht=scontent.fcai20-5.fna&oh=03_AdQemqEG_j921c97oPv7WIJ7hUGHl6fMGfcfq6L0b63xhQ&oe=6474765F",
-              }}
-            />
-            <TextInput placeholder="+02"/>
+            <View style={styles.countryCode}>
+              <Image
+                style={styles.imageHn}
+                source={{
+                  uri:
+                    "https://scontent.fcai20-5.fna.fbcdn.net/v/t1.15752-9/340401649_1225822474725732_2024298827305685223_n.png?stp=cp0_dst-png&_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_ohc=os5obX3qkKUAX-8V2HY&_nc_oc=AQl4hHI1t586DrSLlq8L9iyG2nkuwHGjrUF4kpTnhbkmD8nqOaxoW2PNd0SF2sCBWMM&_nc_ht=scontent.fcai20-5.fna&oh=03_AdQemqEG_j921c97oPv7WIJ7hUGHl6fMGfcfq6L0b63xhQ&oe=6474765F",
+                }}
+              />
+              <TextInput placeholder="+02" />
+            </View>
+            <View style={styles.line}></View>
           </View>
-          <View style={styles.line}></View>
-        </View>
-        <View 
-        style={{
-          width: "70%",
-        }}>
-          <TextInput placeholder="123456"
-           style={{
-            width:"100%",
-           }}
-          />
-
-          <View style={styles.line}></View>
-        </View>
+          <View
+            style={{
+              width: "70%",
+            }}
+          >
+            <TextInput placeholder="123456" />
+            <View style={styles.line}></View>
+          </View>
         </View>
       </View>
       <View style={styles.section}>
