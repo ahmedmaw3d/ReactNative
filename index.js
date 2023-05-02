@@ -9,7 +9,8 @@ import App from './App'
 import GreenScreen from './GreenScreen';
 import EditProfile from './EditProfile';
 import LoginScreen from './LoginScreen';
+import SnapApp from'./SnapApp';
 
 
 
-AppRegistry.registerComponent(appName, ()=> LoginScreen);
+AppRegistry.registerComponent(appName, ()=> SnapApp);
