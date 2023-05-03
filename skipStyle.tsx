@@ -6,11 +6,22 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     padding: 30,
   },
-  snp: {
+  sna: {
     fontSize: 20,
-    fontWeight: "bold",
-    fontFamily: "italic",
-    color:"black",
+    color: "black",
+    fontWeight: "800",
+  },
+  Circle: {
+    width: 10,
+    height: 10,
+    borderRadius: 5,
+    backgroundColor: "green",
+  },
+  rowCrc: {
+    width: 10,
+    height: 10,
+    borderRadius: 5,
+    backgroundColor: "lightgreen",
   },
   skipBtu: {
     width: "15%",
@@ -18,63 +29,59 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     alignItems: "center",
   },
-  sk: {
+  skip: {
     fontSize: 18,
     fontWeight: "500",
     color: "white",
   },
-  image: {
+  iamge: {
     width: 300,
     height: 300,
-    marginTop: 20,
-    marginLeft: 30,
+    marginLeft: 40,
   },
-  acco: {
-    textAlign: "center",
-    fontSize: 20,
-    color:"black",
+  fix: {
+    fontSize: 24,
+    color: "black",
+    fontWeight: "800",
+  },
+  price: {
+    fontSize: 19,
+    color: "black",
+    fontWeight: "800",
+  },
+  nob: {
+    fontSize: 14,
+    color: "black",
     fontWeight: "800",
     marginTop: 20,
   },
-  your: {
-    textAlign: "center",
-    fontSize: 20,
-    color:"black",
-    fontWeight: "800",
-  },
-  fin: {
-    marginTop: 20,
-    color:"black",
+  thenum: {
     fontSize: 14,
     fontWeight: "800",
-  },
-  inv: {
-    fontSize: 14,
-    color:"black",
-    fontWeight: "800",
+    alignContent: "center",
+    color: "black",
   },
   textBtu: {
     width: "100%",
-    backgroundColor: "#FCDA67",
-    padding: 20,
     borderRadius: 40,
-    marginTop: 15,
+    backgroundColor: "#FFDA4D",
+    padding: 20,
+    marginTop: 20,
+    alignItems: "center",
   },
-  textNe: {
-    textAlign: "center",
+  next: {
     fontSize: 18,
+    color: "black",
     fontWeight: "800",
-    color:"black",
   },
   create: {
-    marginTop: 20,
-    color:"black",
     fontWeight: "800",
+    color: "black",
+    marginTop: 15,
   },
   day: {
     fontSize: 18,
-    color:"black",
-    fontWeight: "800",
+    color: "black",
   },
 });
 export default styles;
