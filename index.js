@@ -10,6 +10,7 @@ import GreenScreen from './GreenScreen';
 import EditProfile from './EditProfile';
 import LoginScreen from './LoginScreen';
 import SnapApp from'./SnapApp';
+import SkipApp from'./SkipApp';
 
 
 

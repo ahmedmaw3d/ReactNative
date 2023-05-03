@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, Text, Image, TextInput, TouchableOpacity } from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 import styles from "./snapStyle";
 const SnapApp = () => {
   return (
@@ -8,9 +8,31 @@ const SnapApp = () => {
         style={{
           flexDirection: "row",
           justifyContent: "space-between",
+          alignItems:"center",
         }}
       >
         <Text style={styles.snp}>snapbooks</Text>
+        <View style={{
+          width: 10,
+          height: 10,
+          borderRadius:5,
+          backgroundColor:"green",
+        }}>
+        </View>
+        <View style={{
+          width: 10,
+          height: 10,
+          borderRadius:5,
+          backgroundColor:"lightgreen",
+        }}>
+        </View>
+        <View style={{
+          width: 10,
+          height: 10,
+          borderRadius:5,
+          backgroundColor:"lightgreen",
+        }}>
+        </View>
         <TouchableOpacity style={styles.skipBtu}>
           <Text style={styles.sk}>Skip</Text>
         </TouchableOpacity>
