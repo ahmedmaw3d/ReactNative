@@ -11,7 +11,8 @@ import EditProfile from './EditProfile';
 import LoginScreen from './LoginScreen';
 import SnapApp from'./SnapApp';
 import SkipApp from'./SkipApp';
+import Login from'./Login';
 
 
 
-AppRegistry.registerComponent(appName, ()=> SnapApp);
+AppRegistry.registerComponent(appName, ()=> Login);
