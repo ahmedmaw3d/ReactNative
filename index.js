@@ -12,7 +12,8 @@ import LoginScreen from './LoginScreen';
 import SnapApp from'./SnapApp';
 import SkipApp from'./SkipApp';
 import Login from'./Login';
+import SignUp from'./SignUp';
 
 
 
-AppRegistry.registerComponent(appName, ()=> Login);
+AppRegistry.registerComponent(appName, ()=> SignUp);
