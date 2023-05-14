@@ -1,6 +1,5 @@
 import { Text, View, Image } from "react-native";
 import styles from "./textStyle";
-import Row from "./Row";
 const YourApp = () => {
   const rows = [
     { color: "red", name: "52TH AVENUE OFFICE", date: "Completed 02.02.20" },
@@ -20,12 +19,12 @@ const YourApp = () => {
       {rows.map((row) => {
         return <Row color={row.color} name={row.name} date={row.date} />;
       })}
-      <View style={styles.bottomTab}>
+      {/*<View style={styles.bottomTab}>
         <Text style={styles.bottomTabText}>Home</Text>
         <Text style={styles.bottomTabText}>Now</Text>
         <Text style={styles.bottomTabText}>CheckLists</Text>
         <Text style={styles.bottomTabText}>Archive</Text>
-      </View>
+    </View>*/}
     </View>
   );
 };
