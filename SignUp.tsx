@@ -1,9 +1,24 @@
-import { View, TextInput, Text, TouchableOpacity } from "react-native";
+import react, { useState } from "react";
+import {
+  View,
+  TextInput,
+  Text,
+  TouchableOpacity,
+  Button,
+  ScrollView,
+} from "react-native";
+import Ionicons from "react-native-vector-icons/Ionicons";
+import Lock from "react-native-vector-icons/MaterialIcons";
+import Mail from "react-native-vector-icons/AntDesign";
+import { Navigation } from "react-native-navigation";
 import styles from "./signStyle";
 
-const SignUp = () => {
+const SignUp = ({ componentId }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Text style={styles.title}>Thanks for</Text>
       <Text style={styles.title}>SignUp</Text>
       <Text
@@ -28,9 +43,54 @@ const SignUp = () => {
         your account
       </Text>
       <Text style={styles.email}>Email</Text>
-      <TextInput style={styles.enterEmail} placeholder="your Email" />
+      <View style={styles.enterEmail}>
+        <Mail
+          name={"mail"}
+          size={25}
+          color={"black"}
+          style={{
+            marginLeft: 15,
+          }}
+        />
+        <TextInput
+          value={email}
+          onChangeText={(text) => {
+            setEmail(text);
+          }}
+          placeholder="your Email"
+          placeholderTextColor={"black"}
+        />
+      </View>
       <Text style={styles.password}>Password</Text>
-      <TextInput style={styles.enterPassword} placeholder="password" />
+      <View style={styles.enterPassword}>
+        <Lock
+          name={"lock-outline"}
+          size={20}
+          color={"#171E47"}
+          style={{
+            marginLeft: 10,
+          }}
+        />
+        <TextInput
+          style={{
+            width: "80%",
+          }}
+          value={password}
+          onChangeText={(text) => {
+            setPassword(text);
+          }}
+          placeholder="password"
+          placeholderTextColor={"black"}
+        />
+        <Ionicons
+          name={"eye-outline"}
+          size={25}
+          color={"black"}
+          style={{
+            marginRight: 10,
+          }}
+        />
+      </View>
       <Text
         style={{
           color: "#1B1C41",
@@ -54,22 +114,65 @@ const SignUp = () => {
         including at least one number
       </Text>
       <Text style={styles.confirm}>confirm paassword</Text>
-      <TextInput style={styles.surePassword} placeholder="password" />
+      <View style={styles.surePassword}>
+        <Lock
+          name={"lock-outline"}
+          size={20}
+          color={"#171E47"}
+          style={{
+            marginLeft: 10,
+          }}
+        />
+        <TextInput
+          style={{
+            width: "80%",
+          }}
+          placeholder="password"
+          placeholderTextColor={"black"}
+        />
+        <Ionicons
+          name={"eye-outline"}
+          size={25}
+          color={"black"}
+          style={{
+            marginRight: 10,
+          }}
+        />
+      </View>
+      <View
+        style={{
+          marginTop: 30,
+        }}
+      ></View>
       <TouchableOpacity style={styles.textBut}>
-        <Text style={styles.button}>SignUp</Text>
+        <Text
+          onPress={() => {
+            console.log(email, password);
+          }}
+          style={styles.button}
+        >
+          SignUp
+        </Text>
       </TouchableOpacity>
-      <Text style={styles.akeady}>
+      <Text style={styles.already}>
         Already have an account?
         <Text
+          onPress={() => {
+            Navigation.push(componentId, {
+              component: {
+                name: "Login",
+              },
+            });
+          }}
           style={{
-            color: "#69CA8A",
+            color: "#7FCE97",
           }}
         >
           {" "}
-          Sign in
+          Sign In
         </Text>
       </Text>
-    </View>
+    </ScrollView>
   );
 };
 export default SignUp;
