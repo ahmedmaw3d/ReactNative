@@ -6,21 +6,23 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     padding: 30,
   },
-  sna: {
+  title: {
     fontSize: 20,
     color: "black",
     fontWeight: "800",
   },
-  Circle: {
+  circle: {
     width: 10,
     height: 10,
     borderRadius: 5,
+    marginRight:5,
     backgroundColor: "green",
   },
   rowCrc: {
     width: 10,
     height: 10,
     borderRadius: 5,
+    marginRight:5,
     backgroundColor: "lightgreen",
   },
   skipBtu: {
@@ -34,7 +36,7 @@ const styles = StyleSheet.create({
     fontWeight: "500",
     color: "white",
   },
-  iamge: {
+  image: {
     width: 300,
     height: 300,
     marginLeft: 40,

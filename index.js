@@ -1,17 +1,39 @@
-/**
- * @format
- */
-
-import {AppRegistry} from 'react-native';
-//import App from './App';
-import {name as appName} from './app.json';
-import App from './App'
-import GreenScreen from './GreenScreen';
-import EditProfile from './EditProfile';
-import LoginScreen from './LoginScreen';
-import SnapApp from'./SnapApp';
-import SkipApp from'./SkipApp';
-
-
-
-AppRegistry.registerComponent(appName, ()=> SnapApp);
+import { Navigation } from "react-native-navigation";
+import SignUp from "./SignUp";
+import Login from "./Login";
+import Notification from "./Notification";
+import Insights from "./Insights";
+import YourBank from "./YourBank";
+//import Documents from "./Documents";
+Navigation.registerComponent("SignUp", () => SignUp);
+Navigation.registerComponent("Login", () => Login);
+//Navigation.registerComponent("Notification", () => Notification);
+//Navigation.registerComponent("Insights", () => Insights);
+//Navigation.registerComponent("YourBank", () => YourBank);
+//Navigation.registerComponent("Documents", () => Documents);
+ 
+Navigation.events().registerAppLaunchedListener(() => {
+  Navigation.setRoot({
+    root: {
+      stack: {
+        options: {
+          topBar: {
+            visible: false,
+          }
+        },
+        children: [
+          {
+            component: {
+              name:"SignUp"
+            },
+          },
+          {
+            component: {
+              name:"Login"
+            },
+          },
+        ],
+      },
+    },
+  });
+});
